@@ -12,10 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f2a074e294c8c045bce9965e7edea51, type: 3}
   m_Name: PlayerInfo
   m_EditorClassIdentifier: 
-  slideTime: 0
-  slideDuration: 0.6
-  jumpTime: 0
+  moveSpeed: 3
+  slideTime: 1
+  slideDuration: 0.3
+  jumpTime: 0.1
   checkLandDistance: 0.1
-  jumpForce: 12
-  jumpKey: 32
-  slideKey: 304
+  jumpForce: 7
+  doubleJumpForce: 5
+  checkTime: 0.01
+  jumpCheckDistance: 0.8
+  downForce: -8
+  jumpKey: 273
+  slideKey: 275
+  downKey: 274
