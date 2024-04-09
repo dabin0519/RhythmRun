@@ -21,7 +21,7 @@ MonoBehaviour:
   doubleJumpForce: 5
   checkTime: 0.01
   jumpCheckDistance: 0.8
-  downForce: -8
+  downForce: -20
   jumpKey: 273
   slideKey: 275
   downKey: 274

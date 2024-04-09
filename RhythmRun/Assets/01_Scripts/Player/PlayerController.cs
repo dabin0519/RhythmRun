@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform _groundChecker;
     [SerializeField] private LayerMask _whatIsGround;
     [SerializeField] private GameObject _slideEffect;
+    [SerializeField] private GameObject _landEffect;
+    [SerializeField] private GameObject _jumpEffect;
 
     public UnityEvent JumpEvent;
     public UnityEvent SlideEvent;
@@ -95,6 +97,7 @@ public class PlayerController : MonoBehaviour
     private void Down()
     {
         DownAction?.Invoke();
+        DownEvent?.Invoke();
         Vector3 velocity = new Vector3(_playerRigidbody.velocity.x, _playerInfo.downForce);
         SetVelocity(velocity);
     }
@@ -127,7 +130,16 @@ public class PlayerController : MonoBehaviour
         float jumpForce = isDoubleJump ? _playerInfo.doubleJumpForce : _playerInfo.jumpForce;
         Vector3 velocity = new Vector3(_playerRigidbody.velocity.x, jumpForce);
         SetVelocity(velocity);
+        JumpActions();
+    }
+
+    private void JumpActions()
+    {
+        Vector3 spawnPos = new Vector3(transform.position.x, transform.position.y - _playerCollider.size.y / 2f);
+        GameObject effect = Instantiate(_jumpEffect, spawnPos, Quaternion.identity);
+        Destroy(effect, 0.8f);
         _playerAnimation.Jump();
+        JumpEvent?.Invoke();
         JumpAction?.Invoke();
     }
 
@@ -136,6 +148,9 @@ public class PlayerController : MonoBehaviour
         _isJump = false;
         _isDoubelJump = false;
         _playerAnimation.Land();
+        Vector3 spawnPos = new Vector3(transform.position.x, transform.position.y - _playerCollider.size.y / 2f - 0.1f);
+        GameObject effect = Instantiate(_landEffect, spawnPos, Quaternion.identity);
+        Destroy(effect, 0.8f);
     }
 
     public bool IsGroundDected()
