@@ -9,12 +9,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform _groundChecker;
     [SerializeField] private LayerMask _whatIsGround;
     [SerializeField] private GameObject _slideEffect;
-    [SerializeField] private GameObject _landEffect;
     [SerializeField] private GameObject _jumpEffect;
+    [SerializeField] private GameObject _landEffect;
+    [SerializeField] private GameObject _downEffect;
 
     public UnityEvent JumpEvent;
     public UnityEvent SlideEvent;
     public UnityEvent DownEvent;
+    public UnityEvent LandEvent;
 
     public System.Action JumpAction;
     public System.Action SlideAction;
@@ -32,6 +34,7 @@ public class PlayerController : MonoBehaviour
     private bool _isJump;
     private bool _isDoubelJump;
     private bool _isSlide;
+    private bool _isDown;
 
     private void Awake()
     {
@@ -96,6 +99,7 @@ public class PlayerController : MonoBehaviour
 
     private void Down()
     {
+        _isDown = true;
         DownAction?.Invoke();
         DownEvent?.Invoke();
         Vector3 velocity = new Vector3(_playerRigidbody.velocity.x, _playerInfo.downForce);
@@ -145,12 +149,18 @@ public class PlayerController : MonoBehaviour
 
     private void Land()
     {
-        _isJump = false;
-        _isDoubelJump = false;
-        _playerAnimation.Land();
         Vector3 spawnPos = new Vector3(transform.position.x, transform.position.y - _playerCollider.size.y / 2f - 0.1f);
-        GameObject effect = Instantiate(_landEffect, spawnPos, Quaternion.identity);
+        GameObject spawnObj = _isDown ? _downEffect : _landEffect;
+        GameObject effect = Instantiate(spawnObj, spawnPos, Quaternion.identity);
         Destroy(effect, 0.8f);
+
+        if (!_isDown)
+            LandEvent?.Invoke();
+
+        _playerAnimation.Land();
+        _isDoubelJump = false;
+        _isJump = false;
+        _isDown = false;
     }
 
     public bool IsGroundDected()
