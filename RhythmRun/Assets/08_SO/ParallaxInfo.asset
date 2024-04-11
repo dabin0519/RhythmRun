@@ -16,4 +16,4 @@ MonoBehaviour:
   backSpeed: 1
   middleSpeed: 2
   frontSpeed: 3
-  nearSpeed: 10
+  nearSpeed: 8

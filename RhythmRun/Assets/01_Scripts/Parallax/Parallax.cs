@@ -14,7 +14,7 @@ public enum ParallaxType
 
 public class Parallax : MonoBehaviour
 {
-    [SerializeField] private ParallaxSO _parallaxInfo;
+    [SerializeField] private ParallaxInfoSO _parallaxInfo;
     [SerializeField] private ParallaxType _parallaxType;
     [SerializeField] private float _xOffset;
     [SerializeField] private float _moveXPos = 6f;

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f2a074e294c8c045bce9965e7edea51, type: 3}
   m_Name: PlayerInfo
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 8
   slideTime: 1
   slideDuration: 0.3
   jumpTime: 0.1

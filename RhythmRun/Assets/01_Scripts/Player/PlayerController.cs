@@ -139,7 +139,7 @@ public class PlayerController : MonoBehaviour
 
     private void JumpActions()
     {
-        Vector3 spawnPos = new Vector3(transform.position.x, transform.position.y - _playerCollider.size.y / 2f);
+        Vector3 spawnPos = new Vector3(transform.position.x, transform.position.y - _colliderSize.y / 2f);
         GameObject effect = Instantiate(_jumpEffect, spawnPos, Quaternion.identity);
         Destroy(effect, 0.8f);
         _playerAnimation.Jump();
@@ -149,7 +149,7 @@ public class PlayerController : MonoBehaviour
 
     private void Land()
     {
-        Vector3 spawnPos = new Vector3(transform.position.x, transform.position.y - _playerCollider.size.y / 2f - 0.1f);
+        Vector3 spawnPos = new Vector3(transform.position.x, transform.position.y - _colliderSize.y / 2f - 0.1f);
         GameObject spawnObj = _isDown ? _downEffect : _landEffect;
         GameObject effect = Instantiate(spawnObj, spawnPos, Quaternion.identity);
         Destroy(effect, 0.8f);
