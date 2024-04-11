@@ -47,11 +47,6 @@ public class IntroButton : ButtonController
         }
     }
 
-    protected virtual void Click()
-    {
-        OnClick?.Invoke();
-    }
-
     public override void OnPointerClick(PointerEventData eventData)
     {
         base.OnPointerClick(eventData);
@@ -59,7 +54,7 @@ public class IntroButton : ButtonController
 
     public override void OnPointerEnter(PointerEventData eventData)
     {
-        base .OnPointerEnter(eventData);
+        UIContoller.Instance.PlayMouseOnSound();
 
         _isEnter = true;
         _rectTransform.DOSizeDelta(_rectSize * 1.2f, _sizeDuration);

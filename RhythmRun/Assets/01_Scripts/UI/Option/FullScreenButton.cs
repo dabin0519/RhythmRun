@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExitButton : IntroButton
+public class FullScreenButton : ButtonController
 {
+
+
     public override void Click()
     {
-        Application.Quit();
+        Debug.LogError("이거 안해줬는데여ㅛㅇ?");
     }
 }

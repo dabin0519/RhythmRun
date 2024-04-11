@@ -20,17 +20,22 @@ public class ButtonController : MonoBehaviour, IPointerClickHandler, IPointerEnt
 
     public virtual void OnPointerClick(PointerEventData eventData)
     {
-        OnClick?.Invoke();
-        UIContoller.Instance.PlayMouseClickSound();
+        Click();
     }
 
     public virtual void OnPointerEnter(PointerEventData eventData)
     {
-        UIContoller.Instance.PlayMouseOnSound();
+        
     }
 
     public virtual void OnPointerExit(PointerEventData eventData)
     {
         
+    }
+
+    public virtual void Click()
+    {
+        OnClick?.Invoke();
+        UIContoller.Instance.PlayMouseClickSound();
     }
 }

@@ -7,7 +7,7 @@ public class StartButton : IntroButton
 {
     [SerializeField] private string _sceneName;
 
-    protected override void Click()
+    public override void Click()
     {
         SceneManager.LoadScene(_sceneName);
     }

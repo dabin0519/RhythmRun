@@ -7,8 +7,9 @@ public class OptionButton : IntroButton
 {
     [SerializeField] private Image _optionPanel;
 
-    protected override void Click()
+    public override void Click()
     {
         _optionPanel.gameObject.SetActive(true);
+        UIContoller.Instance.PlayMouseClickSound();
     }
 }
