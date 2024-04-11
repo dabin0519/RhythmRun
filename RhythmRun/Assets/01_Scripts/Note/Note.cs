@@ -27,7 +27,7 @@ public abstract class Note : MonoBehaviour
         Movement();
     }
 
-    protected abstract void NoteAction();
+    protected abstract void NoteAction(KeyCode key);
 
     protected virtual void ChangeColor()
     {

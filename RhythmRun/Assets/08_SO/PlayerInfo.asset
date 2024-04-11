@@ -22,6 +22,10 @@ MonoBehaviour:
   checkTime: 0.01
   jumpCheckDistance: 0.8
   downForce: -20
+  attackTime: 0
+  attackDistance: 0.7
+  attackRadius: 0.5
   jumpKey: 273
   slideKey: 275
   downKey: 274
+  attackKey: 276

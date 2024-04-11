@@ -23,8 +23,14 @@ public class PlayerInfoSO : ScriptableObject
     [Header("--DownInfo--")]
     public float downForce;
 
+    [Header("--Attack--")]
+    public float attackTime;        // 재사용 시간
+    public float attackDistance;    // 사거리
+    public float attackRadius;
+
     [Header("--KeyInfo--")]
     public KeyCode jumpKey;
     public KeyCode slideKey;
     public KeyCode downKey;
+    public KeyCode attackKey;
 }

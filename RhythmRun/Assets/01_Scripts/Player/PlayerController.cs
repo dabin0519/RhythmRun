@@ -6,8 +6,14 @@ using UnityEngine.Events;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private PlayerInfoSO _playerInfo;
+
+    [Header("--Info--")]
     [SerializeField] private Transform _groundChecker;
     [SerializeField] private LayerMask _whatIsGround;
+    [SerializeField] private Transform _attackTrm;
+    [SerializeField] private LayerMask _whatIsEnemy;
+
+    [Header("--Effect--")]
     [SerializeField] private GameObject _slideEffect;
     [SerializeField] private GameObject _jumpEffect;
     [SerializeField] private GameObject _landEffect;
@@ -18,9 +24,7 @@ public class PlayerController : MonoBehaviour
     public UnityEvent DownEvent;
     public UnityEvent LandEvent;
 
-    public System.Action JumpAction;
-    public System.Action SlideAction;
-    public System.Action DownAction;
+    public System.Action<KeyCode> InputAction;
 
     public PlayerInfoSO PlayerInfo => _playerInfo;
 
@@ -95,12 +99,26 @@ public class PlayerController : MonoBehaviour
             if(!IsGroundDected())
                 Down();
         }
+
+        if(Input.GetKeyDown(_playerInfo.attackKey))
+        {
+            if(IsGroundDected())
+            {
+                GroundAttack();
+            }
+        }
+    }
+
+    private void GroundAttack()
+    {
+        if (IsEnemyHit())
+            Debug.Log("이거 적이 맞았어용");
     }
 
     private void Down()
     {
         _isDown = true;
-        DownAction?.Invoke();
+        InputAction?.Invoke(_playerInfo.downKey);
         DownEvent?.Invoke();
         Vector3 velocity = new Vector3(_playerRigidbody.velocity.x, _playerInfo.downForce);
         SetVelocity(velocity);
@@ -126,7 +144,7 @@ public class PlayerController : MonoBehaviour
         _playerCollider.offset = new Vector2(0, -0.8f);
         _playerCollider.size = new Vector2(_playerCollider.size.x, 1f);
 
-        SlideAction?.Invoke();
+        InputAction?.Invoke(_playerInfo.slideKey);
     }
 
     private void Jump(bool isDoubleJump = false)
@@ -144,7 +162,7 @@ public class PlayerController : MonoBehaviour
         Destroy(effect, 0.8f);
         _playerAnimation.Jump();
         JumpEvent?.Invoke();
-        JumpAction?.Invoke();
+        InputAction?.Invoke(_playerInfo.jumpKey);
     }
 
     private void Land()
@@ -169,6 +187,9 @@ public class PlayerController : MonoBehaviour
         return Physics2D.Raycast(_groundChecker.position, Vector2.down, distance, _whatIsGround);
     }
 
+    public bool IsEnemyHit() => Physics2D.CircleCast(_attackTrm.position, _playerInfo.attackRadius, Vector2.right, _playerInfo.attackDistance, _whatIsEnemy);
+
+
     private void SetVelocity(Vector3 velocity)
     {
         _playerRigidbody.velocity = velocity;
@@ -178,6 +199,8 @@ public class PlayerController : MonoBehaviour
     {
         float distance = _isJump ? _playerInfo.jumpCheckDistance : _playerInfo.checkLandDistance;
         Debug.DrawRay(_groundChecker.position, Vector2.down * distance, Color.red);
+
+        Debug.DrawRay(_attackTrm.position, Vector2.right * _playerInfo.attackDistance, Color.red);
     }
 
     private IEnumerator WaitCoroutine(float duration, System.Action callBack)

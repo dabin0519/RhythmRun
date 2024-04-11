@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,14 +9,21 @@ public class SlideNote : Note
     {
         base.Awake();
 
-        _playerController.SlideAction += NoteAction;
+        _playerController.InputAction += NoteAction;
     }
 
-    protected override void NoteAction()
+    private void OnDisable()
     {
+        _playerController.InputAction -= NoteAction;
+    }
+
+    protected override void NoteAction(KeyCode key)
+    {
+        if (key != _playerInfo.slideKey)
+            return;
+
         if(isCorrect)
         {
-            Debug.Log("맞았어용");
             ChangeColor();
         }
     }

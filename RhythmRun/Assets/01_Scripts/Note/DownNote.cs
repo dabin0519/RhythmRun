@@ -8,11 +8,19 @@ public class DownNote : Note
     {
         base.Awake();
 
-        _playerController.DownAction += NoteAction;
+        _playerController.InputAction += NoteAction;
     }
 
-    protected override void NoteAction()
+    private void OnDisable()
     {
+        _playerController.InputAction -= NoteAction;
+    }
+
+    protected override void NoteAction(KeyCode key)
+    {
+        if (key != _playerInfo.downKey)
+            return;
+
         if (isCorrect)
         {
             ChangeColor();

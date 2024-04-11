@@ -6,7 +6,7 @@ using UnityEngine;
 public struct NoteInfo
 {
     public Note note;
-    public float spawnPosY;
+    public float spawnTime;
 }
 
 [CreateAssetMenu(menuName = "SO/NoteInfo")]

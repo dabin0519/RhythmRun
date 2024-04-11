@@ -8,11 +8,19 @@ public class JumpNote : Note
     {
         base.Awake();
 
-        _playerController.JumpAction += NoteAction;
+        _playerController.InputAction += NoteAction;
     }
 
-    protected override void NoteAction()
+    private void OnDisable()
     {
+        _playerController.InputAction -= NoteAction;
+    }
+
+    protected override void NoteAction(KeyCode key)
+    {
+        if (key != _playerInfo.jumpKey)
+            return;
+
         if(isCorrect)
         {
             ChangeColor();
