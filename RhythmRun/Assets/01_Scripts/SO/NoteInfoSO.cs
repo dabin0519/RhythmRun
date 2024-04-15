@@ -7,6 +7,7 @@ public struct NoteInfo
 {
     public Note note;
     public float spawnTime;
+    public float spawnYPos;
 }
 
 [CreateAssetMenu(menuName = "SO/NoteInfo")]

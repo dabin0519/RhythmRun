@@ -25,6 +25,15 @@ public abstract class Note : MonoBehaviour
     protected virtual void Update()
     {
         Movement();
+        CheckDie();
+    }
+
+    private void CheckDie()
+    {
+        if(transform.position.x < -10)
+        {
+            Destroy(gameObject);
+        }
     }
 
     protected abstract void NoteAction(KeyCode key);

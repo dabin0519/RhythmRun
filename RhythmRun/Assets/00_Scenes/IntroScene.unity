@@ -2404,7 +2404,7 @@ MonoBehaviour:
   OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 205400576}
+      - m_Target: {fileID: 205400578}
         m_TargetAssemblyTypeName: KeySettup, Assembly-CSharp
         m_MethodName: KeyListen
         m_Mode: 1
@@ -2804,7 +2804,7 @@ MonoBehaviour:
   OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1548847787}
+      - m_Target: {fileID: 1548847789}
         m_TargetAssemblyTypeName: KeySettup, Assembly-CSharp
         m_MethodName: KeyListen
         m_Mode: 1
@@ -2999,6 +2999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 812ae18ed692a0c45ace67c4cf31aab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Active: 0
 --- !u!1 &1499466258
 GameObject:
   m_ObjectHideFlags: 0

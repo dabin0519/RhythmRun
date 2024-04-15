@@ -9,11 +9,13 @@ public class UIContoller : MonoSingleton<UIContoller>
 
     public void PlayMouseOnSound()
     {
-        SoundManager.Instance.PlaySFX(_onMouseClip);
+        if(_onMouseClip != null)
+            SoundManager.Instance.PlaySFX(_onMouseClip);
     }
 
     public void PlayMouseClickSound()
     {
-        SoundManager.Instance.PlaySFX(_clickMouseClip);
+        if(_clickMouseClip != null)
+            SoundManager.Instance.PlaySFX(_clickMouseClip);
     }
 }

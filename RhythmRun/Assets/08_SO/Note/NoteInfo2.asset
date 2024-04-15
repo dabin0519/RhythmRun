@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19f43227342d43146a64eb8998fa641e, type: 3}
+  m_Name: NoteInfo2
+  m_EditorClassIdentifier: 
+  noteInfoLists:
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 0
+    spawnYPos: -3.3450484
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 0.93894196
+    spawnYPos: -1.1913093
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 0.9300165
+    spawnYPos: -3.3451338
+  - note: {fileID: 5282581967981392979, guid: a07a324f2ea472840bd3d33288c1aeff, type: 3}
+    spawnTime: 0.47807884
+    spawnYPos: -1.1623064
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 0.5152025
+    spawnYPos: -2.1482053
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 0.9816055
+    spawnYPos: -3.345077
+  - note: {fileID: 5282581967981392979, guid: a07a324f2ea472840bd3d33288c1aeff, type: 3}
+    spawnTime: 0.56658554
+    spawnYPos: -0.9920012
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 1.6319704
+    spawnYPos: -3.3450894
+  - note: {fileID: 5282581967981392979, guid: a07a324f2ea472840bd3d33288c1aeff, type: 3}
+    spawnTime: 1.913351
+    spawnYPos: -3.3450894
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 0.8581314
+    spawnYPos: -3.3452725
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 1.0197754
+    spawnYPos: -1.4084945
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 0.6695404
+    spawnYPos: -3.345097
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 0.49848557
+    spawnYPos: -1.1203773
+  - note: {fileID: 5282581967981392979, guid: a07a324f2ea472840bd3d33288c1aeff, type: 3}
+    spawnTime: 0.42069244
+    spawnYPos: 0.07317903
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 0.5007477
+    spawnYPos: -1.5622202
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 1.0343685
+    spawnYPos: -3.3451328
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 0.4799404
+    spawnYPos: -1.162306
+  - note: {fileID: 5282581967981392979, guid: a07a324f2ea472840bd3d33288c1aeff, type: 3}
+    spawnTime: 0.41345215
+    spawnYPos: 0.03125038
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 0.49284554
+    spawnYPos: -1.5236449
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 0.76659584
+    spawnYPos: -3.345117
+  - note: {fileID: 5282581967981392979, guid: a07a324f2ea472840bd3d33288c1aeff, type: 3}
+    spawnTime: 0.4915161
+    spawnYPos: -1.1622933
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 0.49162102
+    spawnYPos: -2.0919921
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 1.1055508
+    spawnYPos: -3.345028
+  - note: {fileID: 5282581967981392979, guid: a07a324f2ea472840bd3d33288c1aeff, type: 3}
+    spawnTime: 0.6894131
+    spawnYPos: -0.9198015
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 0.33973694
+    spawnYPos: -2.2082446
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 0.73934364
+    spawnYPos: -3.3450541
+  - note: {fileID: 5282581967981392979, guid: a07a324f2ea472840bd3d33288c1aeff, type: 3}
+    spawnTime: 0.5841656
+    spawnYPos: -0.9697025
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 0.50697327
+    spawnYPos: -2.4880009
