@@ -1,0 +1,321 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19f43227342d43146a64eb8998fa641e, type: 3}
+  m_Name: NoteInfo_MilkyWay
+  m_EditorClassIdentifier: 
+  noteInfoLists:
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 4.707085
+    spawnYPos: -3.3450484
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 0.76135635
+    spawnYPos: -0.93272185
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 0.24841213
+    spawnYPos: 0.010194272
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 1.0655041
+    spawnYPos: -3.3451371
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 0.8040886
+    spawnYPos: -0.9627882
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 0.27273846
+    spawnYPos: 0.025191918
+  - note: {fileID: 5282581967981392979, guid: a07a324f2ea472840bd3d33288c1aeff, type: 3}
+    spawnTime: 0.78987026
+    spawnYPos: -3.3451324
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 0.28219986
+    spawnYPos: -3.3686497
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 0.84796715
+    spawnYPos: -1.0607523
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 0.26153183
+    spawnYPos: -0.11783618
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 1.0465908
+    spawnYPos: -3.3450909
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 0.7344322
+    spawnYPos: -0.92364347
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 0.2672844
+    spawnYPos: 0.019272655
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 1.146164
+    spawnYPos: -3.3451343
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 1.0317059
+    spawnYPos: -1.4083295
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 1.0887356
+    spawnYPos: -3.345097
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 0.8159714
+    spawnYPos: -0.9627563
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 0.29239273
+    spawnYPos: 0.0663639
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 1.0369244
+    spawnYPos: -3.345119
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 0.80989265
+    spawnYPos: -0.9627737
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 0.26477242
+    spawnYPos: 0.025206462
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 1.0334911
+    spawnYPos: -3.3451319
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 0.7910671
+    spawnYPos: -0.9627844
+  - note: {fileID: 5282581967981392979, guid: a07a324f2ea472840bd3d33288c1aeff, type: 3}
+    spawnTime: 0.2878723
+    spawnYPos: 0.025195733
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 1.0979385
+    spawnYPos: -3.3570247
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 0.7998924
+    spawnYPos: -0.97470284
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 0.2869625
+    spawnYPos: 0.013277307
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 1.0221329
+    spawnYPos: -3.3451362
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 1.0992031
+    spawnYPos: -1.612247
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 0.5424366
+    spawnYPos: -3.3451657
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 0.24856186
+    spawnYPos: -1.9712375
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 0.33192444
+    spawnYPos: -0.8716092
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 1.0510731
+    spawnYPos: -3.3450427
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 1.0381927
+    spawnYPos: -1.4723042
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 1.147747
+    spawnYPos: -2.2586741
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 1.0168266
+    spawnYPos: -3.345109
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 1.0864334
+    spawnYPos: -1.6880453
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 1.0934906
+    spawnYPos: -3.3451304
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 0.7120743
+    spawnYPos: -0.9184874
+  - note: {fileID: 5282581967981392979, guid: a07a324f2ea472840bd3d33288c1aeff, type: 3}
+    spawnTime: 0.31217575
+    spawnYPos: 0.14784878
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 2.0826073
+    spawnYPos: -3.3450952
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 1.1747894
+    spawnYPos: -1.9390379
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 1.015461
+    spawnYPos: -2.0422602
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 1.1011086
+    spawnYPos: -3.3451366
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 1.0662117
+    spawnYPos: -1.6122472
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 1.0937119
+    spawnYPos: -3.3451324
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 0.8640442
+    spawnYPos: -1.0372084
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 0.24938965
+    spawnYPos: -0.09429233
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 0.98952484
+    spawnYPos: -3.34509
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 0.89160156
+    spawnYPos: -1.1064103
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 0.23875427
+    spawnYPos: -0.21248218
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 1.0348969
+    spawnYPos: -3.3451061
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 1.0347862
+    spawnYPos: -1.4083068
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 1.0907974
+    spawnYPos: -3.345097
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 0.8309479
+    spawnYPos: -0.9836402
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 0.2686081
+    spawnYPos: 0.0043399483
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 1.0608063
+    spawnYPos: -3.345139
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 0.78923035
+    spawnYPos: -0.94583
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 0.24081421
+    spawnYPos: -0.051901907
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 1.1462593
+    spawnYPos: -3.3450599
+  - note: {fileID: 5282581967981392979, guid: a07a324f2ea472840bd3d33288c1aeff, type: 3}
+    spawnTime: 0.77679443
+    spawnYPos: -0.9457668
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 0.25455093
+    spawnYPos: -2.2082703
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 1.1062431
+    spawnYPos: -3.3450494
+  - note: {fileID: 5282581967981392979, guid: a07a324f2ea472840bd3d33288c1aeff, type: 3}
+    spawnTime: 1.0805664
+    spawnYPos: -1.6121776
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 1.0624695
+    spawnYPos: -3.3450494
+  - note: {fileID: 5282581967981392979, guid: a07a324f2ea472840bd3d33288c1aeff, type: 3}
+    spawnTime: 1.0071411
+    spawnYPos: -1.3481376
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 0.033115387
+    spawnYPos: -2.2723093
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 1.0100632
+    spawnYPos: -3.3450484
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 0.8773918
+    spawnYPos: -1.0697974
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 0.22898102
+    spawnYPos: -0.17586932
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 1.1061707
+    spawnYPos: -3.3451095
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 0.7632065
+    spawnYPos: -0.93277025
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 0.286026
+    spawnYPos: 0.055209905
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 0.8644104
+    spawnYPos: -3.3451223
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 0.25704956
+    spawnYPos: -1.9711701
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 1.0468826
+    spawnYPos: -2.2864122
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 1.0602875
+    spawnYPos: -3.3451047
+  - note: {fileID: 5282581967981392979, guid: a07a324f2ea472840bd3d33288c1aeff, type: 3}
+    spawnTime: 0.7375488
+    spawnYPos: -0.9236547
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 0.2553711
+    spawnYPos: -2.0919821
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 1.162857
+    spawnYPos: -2.33746
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 1.0362625
+    spawnYPos: -3.34511
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 1.1629486
+    spawnYPos: -2.0305657
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 0.98241425
+    spawnYPos: -1.9374641
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 2.1610413
+    spawnYPos: -3.345118
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 2.1431198
+    spawnYPos: -3.3450894
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 1.056839
+    spawnYPos: -1.5403134
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 1.0673294
+    spawnYPos: -1.8555557
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 1.1518631
+    spawnYPos: -3.3450952
+  - note: {fileID: 5282581967981392979, guid: a07a324f2ea472840bd3d33288c1aeff, type: 3}
+    spawnTime: 1.5462799
+    spawnYPos: -3.349938
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 0.51083374
+    spawnYPos: -3.357778
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 1.0816345
+    spawnYPos: -1.6249158
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 1.0651855
+    spawnYPos: -3.3451376
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 1.0733566
+    spawnYPos: -1.612248
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 1.1241913
+    spawnYPos: -3.3451324
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 1.0248566
+    spawnYPos: -1.408328
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 1.1087799
+    spawnYPos: -3.345097
+  - note: {fileID: 5282581967981392979, guid: a07a324f2ea472840bd3d33288c1aeff, type: 3}
+    spawnTime: 1.480156
+    spawnYPos: -3.3570557
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 0.40499878
+    spawnYPos: -3.3688276
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 1.2692642
+    spawnYPos: -2.4596086
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 1.126442
+    spawnYPos: -3.1223106
+  - note: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
+    spawnTime: 1.06324
+    spawnYPos: -3.3451152
+  - note: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+    spawnTime: 1.1016464
+    spawnYPos: -1.6880503

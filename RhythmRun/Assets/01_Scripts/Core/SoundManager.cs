@@ -18,4 +18,10 @@ public class SoundManager : MonoSingleton<SoundManager>
         _sfxSource.clip = sfx;
         _sfxSource.Play();
     }
+
+    public void PlayBGM(AudioClip bgm)
+    {
+        _bgmSource.clip = bgm;
+        _bgmSource.Play();
+    }
 }

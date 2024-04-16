@@ -12,6 +12,7 @@ public class RecordManager : MonoBehaviour
     [SerializeField] private Note _jumpNote;
     [SerializeField] private Note _slideNote;
     [SerializeField] private Note _downNote;
+    [SerializeField] private AudioClip _bgmClip;
 
     private PlayerController _playerController;
     private CapsuleCollider2D _playerCollider;
@@ -95,5 +96,7 @@ public class RecordManager : MonoBehaviour
         _isOnRecord = true;
         _recordTime = Time.time;
         _timerText.gameObject.SetActive(false);
+        if(_bgmClip != null)
+            SoundManager.Instance.PlayBGM(_bgmClip);
     }
 }

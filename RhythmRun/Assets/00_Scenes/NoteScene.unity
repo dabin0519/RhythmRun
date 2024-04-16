@@ -1335,7 +1335,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1548,12 +1548,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60d17af26479fb7468f06fc4677c5a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _noteInfo: {fileID: 11400000, guid: 28286bd587de5cd4c9b4d07e777423e0, type: 2}
+  _noteInfo: {fileID: 11400000, guid: 6c55226c74d6da844aa6163d7ad12188, type: 2}
   _timerText: {fileID: 573548914}
   _playerTrm: {fileID: 1010754219}
   _jumpNote: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
   _slideNote: {fileID: 5282581967981392979, guid: a07a324f2ea472840bd3d33288c1aeff, type: 3}
   _downNote: {fileID: 5703496413113018983, guid: 736f03079e4fada49895c11e9d12a86f, type: 3}
+  _bgmClip: {fileID: 8300000, guid: 49007b558da791643a75c9f6833ccefe, type: 3}
 --- !u!1 &1655674709
 GameObject:
   m_ObjectHideFlags: 0

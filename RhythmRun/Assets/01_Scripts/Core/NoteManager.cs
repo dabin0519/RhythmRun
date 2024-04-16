@@ -5,5 +5,8 @@ using UnityEngine;
 
 public class NoteManager : MonoSingleton<NoteManager>
 {
-    
+    public void Log(string value)
+    {
+        Debug.Log(value);
+    }
 }
