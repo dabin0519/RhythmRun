@@ -39,6 +39,7 @@ public class PlayerController : MonoBehaviour
     private bool _isDoubelJump;
     private bool _isSlide;
     private bool _isDown;
+    private bool _isPause;
 
     private void Awake()
     {
@@ -53,6 +54,8 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (_isPause)
+            return;
         PlayerInput();
         CheckAction();
     }
@@ -188,7 +191,6 @@ public class PlayerController : MonoBehaviour
     }
 
     public bool IsEnemyHit() => Physics2D.CircleCast(_attackTrm.position, _playerInfo.attackRadius, Vector2.right, _playerInfo.attackDistance, _whatIsEnemy);
-
 
     private void SetVelocity(Vector3 velocity)
     {

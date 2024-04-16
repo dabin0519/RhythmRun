@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -38,5 +39,13 @@ public class PlayerAnimation : MonoBehaviour
     {
         yield return new WaitForSeconds(duration);
         callBack?.Invoke();
+    }
+
+    public void Pause(bool value)
+    {
+        if (value)
+            _playerAnimator.speed = 0;
+        else
+            _playerAnimator.speed = 1;
     }
 }

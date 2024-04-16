@@ -24,4 +24,14 @@ public class SoundManager : MonoSingleton<SoundManager>
         _bgmSource.clip = bgm;
         _bgmSource.Play();
     }
+
+    public void PauseBGM()
+    {
+        _bgmSource.Pause();
+    }
+
+    public void RestartBGM()
+    {
+        _bgmSource.UnPause();
+    }
 }
