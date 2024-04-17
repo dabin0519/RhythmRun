@@ -14,15 +14,18 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask _whatIsEnemy;
 
     [Header("--Effect--")]
-    [SerializeField] private GameObject _slideEffect;
-    [SerializeField] private GameObject _jumpEffect;
-    [SerializeField] private GameObject _landEffect;
-    [SerializeField] private GameObject _downEffect;
+    [SerializeField] private Effect _slideEffect;
+    [SerializeField] private Effect _jumpEffect;
+    [SerializeField] private Effect _landEffect;
+    [SerializeField] private Effect _downEffect;
+    [SerializeField] private Effect _groundAttackEffect;
 
+    [Header("--Event--")]
     public UnityEvent JumpEvent;
     public UnityEvent SlideEvent;
     public UnityEvent DownEvent;
     public UnityEvent LandEvent;
+    public UnityEvent GroundAttackEvent;
 
     public System.Action<KeyCode> InputAction;
 
@@ -49,7 +52,7 @@ public class PlayerController : MonoBehaviour
 
         _colliderSize = _playerCollider.size;
         _colliderOffset = _playerCollider.offset;
-        _slideEffect.SetActive(false);
+        _slideEffect.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -114,8 +117,14 @@ public class PlayerController : MonoBehaviour
 
     private void GroundAttack()
     {
+        InputAction?.Invoke(_playerInfo.attackKey);
+        GroundAttackEvent?.Invoke();
+        SpawnEffect(_groundAttackEffect, 0.8f, _attackTrm.position);
+
         if (IsEnemyHit())
+        {
             Debug.Log("이거 적이 맞았어용");
+        }
     }
 
     private void Down()
@@ -130,7 +139,7 @@ public class PlayerController : MonoBehaviour
     private void Slide()
     {
         _isSlide = true;
-        _slideEffect.SetActive(true);
+        _slideEffect.gameObject.SetActive(true);
         SlideEvent?.Invoke();
         StartCoroutine(WaitCoroutine(_playerInfo.slideTime, () =>
         {
@@ -139,7 +148,7 @@ public class PlayerController : MonoBehaviour
 
         StartCoroutine(WaitCoroutine(_playerInfo.slideDuration + 0.2f, () =>
         {
-            _slideEffect.SetActive(false);
+            _slideEffect.gameObject.SetActive(false);
             _playerCollider.size = _colliderSize;
             _playerCollider.offset = _colliderOffset;
         }));
@@ -161,9 +170,7 @@ public class PlayerController : MonoBehaviour
     private void JumpActions()
     {
         Vector3 spawnPos = new Vector3(transform.position.x, transform.position.y - _colliderSize.y / 2f);
-        GameObject effect = Instantiate(_jumpEffect, spawnPos, Quaternion.identity);
-        Destroy(effect, 0.8f);
-        _playerAnimation.Jump();
+        SpawnEffect(_jumpEffect, 0.8f, spawnPos);
         JumpEvent?.Invoke();
         InputAction?.Invoke(_playerInfo.jumpKey);
     }
@@ -171,9 +178,8 @@ public class PlayerController : MonoBehaviour
     private void Land()
     {
         Vector3 spawnPos = new Vector3(transform.position.x, transform.position.y - _colliderSize.y / 2f - 0.1f);
-        GameObject spawnObj = _isDown ? _downEffect : _landEffect;
-        GameObject effect = Instantiate(spawnObj, spawnPos, Quaternion.identity);
-        Destroy(effect, 0.8f);
+        Effect efffect = _isDown ? _downEffect : _landEffect;
+        SpawnEffect(efffect, 0.8f, spawnPos);
 
         if (!_isDown)
             LandEvent?.Invoke();
@@ -182,6 +188,12 @@ public class PlayerController : MonoBehaviour
         _isDoubelJump = false;
         _isJump = false;
         _isDown = false;
+    }
+
+    private void SpawnEffect(Effect effect, float lifeTime, Vector3 spawnPos)
+    {
+        Effect newEffect = Instantiate(effect, spawnPos, Quaternion.identity);
+        Destroy(newEffect.gameObject, lifeTime);
     }
 
     public bool IsGroundDected()

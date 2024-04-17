@@ -7,6 +7,9 @@ public class SoundManager : MonoSingleton<SoundManager>
     private AudioSource _bgmSource;
     private AudioSource _sfxSource;
 
+    public AudioSource bgmSource => _bgmSource;
+    public AudioSource sfxSource => _sfxSource;
+
     private void Awake()
     {
         _bgmSource = GetComponent<AudioSource>();
