@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DownNote : Note
+public class AttackNote : Note
 {
     protected override void NoteAction(KeyCode key)
     {
-        if (key != _playerInfo.downKey)
+        if (key != _playerInfo.attackKey)
             return;
 
-        if (isCorrect)
+        if(isCorrect)
         {
             Correct();
         }

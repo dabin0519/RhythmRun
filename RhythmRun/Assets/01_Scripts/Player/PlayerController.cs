@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Effect _landEffect;
     [SerializeField] private Effect _downEffect;
     [SerializeField] private Effect _groundAttackEffect;
+    [SerializeField] private Effect _inAirAttackEffect;
 
     [Header("--Event--")]
     public UnityEvent JumpEvent;
@@ -26,6 +27,7 @@ public class PlayerController : MonoBehaviour
     public UnityEvent DownEvent;
     public UnityEvent LandEvent;
     public UnityEvent GroundAttackEvent;
+    public UnityEvent InAirAttackEvent;
 
     public System.Action<KeyCode> InputAction;
 
@@ -112,18 +114,36 @@ public class PlayerController : MonoBehaviour
             {
                 GroundAttack();
             }
+            else
+            {
+                InAirAttack();
+            }
         }
+    }
+
+    private void InAirAttack()
+    {
+        InAirAttackEvent?.Invoke();
+        SpawnEffect(_inAirAttackEffect, 0.8f, _attackTrm.position);
+
+        Attack();
     }
 
     private void GroundAttack()
     {
-        InputAction?.Invoke(_playerInfo.attackKey);
         GroundAttackEvent?.Invoke();
         SpawnEffect(_groundAttackEffect, 0.8f, _attackTrm.position);
 
-        if (IsEnemyHit())
+        Attack();
+    }
+
+    private void Attack()
+    {
+        InputAction?.Invoke(_playerInfo.attackKey);
+
+        if(IsEnemyHit())
         {
-            Debug.Log("이거 적이 맞았어용");
+            Debug.Log("적 맞음");
         }
     }
 
@@ -164,6 +184,7 @@ public class PlayerController : MonoBehaviour
         float jumpForce = isDoubleJump ? _playerInfo.doubleJumpForce : _playerInfo.jumpForce;
         Vector3 velocity = new Vector3(_playerRigidbody.velocity.x, jumpForce);
         SetVelocity(velocity);
+        _playerAnimation.Jump();
         JumpActions();
     }
 

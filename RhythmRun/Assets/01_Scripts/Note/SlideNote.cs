@@ -5,18 +5,6 @@ using UnityEngine;
 
 public class SlideNote : Note
 {
-    protected override void Awake()
-    {
-        base.Awake();
-
-        _playerController.InputAction += NoteAction;
-    }
-
-    private void OnDisable()
-    {
-        _playerController.InputAction -= NoteAction;
-    }
-
     protected override void NoteAction(KeyCode key)
     {
         if (key != _playerInfo.slideKey)
@@ -24,7 +12,7 @@ public class SlideNote : Note
 
         if(isCorrect)
         {
-            ChangeColor();
+            Correct();
         }
     }
 }
