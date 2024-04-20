@@ -12,7 +12,7 @@ public abstract class Note : MonoBehaviour
     protected PlayerController _playerController;
     protected PlayerInfoSO _playerInfo;
     protected SpriteRenderer _noteSpriteRenderer;
-    protected GameObject _hitObject;
+    protected HitNote _hitObject;
     protected Vector3 _startScale = new Vector3(2, 2, 1);
     protected Vector3 _endScale = new Vector3(1, 1, 1);
     protected float _distance;
@@ -26,8 +26,9 @@ public abstract class Note : MonoBehaviour
 
         if(!isHidden)
         {
-            _hitObject = transform.Find("Hit").gameObject;
+            _hitObject = transform.Find("Hit").GetComponent<HitNote>();
             _hitObject.transform.localScale = _startScale;
+            _hitObject.gameObject.SetActive(false);
         }
 
         _percent = 1;
@@ -64,6 +65,8 @@ public abstract class Note : MonoBehaviour
         }
     }
 
+    private bool _isHitNoteOn;
+
     private void ChangeScale()
     {
         if(transform.position.x < _playerController.transform.position.x)
@@ -72,6 +75,12 @@ public abstract class Note : MonoBehaviour
         }
         else if(transform.position.x < 0f)
         {
+            if(!_isHitNoteOn)
+            {
+                _isHitNoteOn = true;
+                _hitObject.gameObject.SetActive(true);
+            }
+
             float distance = Mathf.Abs(_playerController.transform.position.x - transform.position.x);
             _percent = distance / _distance;
             Vector3 scale = Vector3.Lerp(_endScale, _startScale, _percent);
@@ -95,19 +104,19 @@ public abstract class Note : MonoBehaviour
 
         if(_percent < 0.02f)
         {
-            Debug.Log("Perfect");
+            NoteManager.Instance.Perfect++;
         }
         else if( _percent < 0.05f)
         {
-            Debug.Log("Good");
+            NoteManager.Instance.Good++;
         }
         else if(_percent < 0.08f)
         {
-            Debug.Log("Normal");
+            NoteManager.Instance.Normal++;
         }
         else if(_percent < 0.12f)
         {
-            Debug.Log("Bad");
+            NoteManager.Instance.Bad++;
         }
     }
 
@@ -121,20 +130,4 @@ public abstract class Note : MonoBehaviour
         Vector3 moveVec = Vector2.left * moveSpeed * Time.deltaTime;
         transform.position += moveVec;
     }
-
-    /*protected virtual void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.CompareTag("Player"))
-        {
-            isCorrect = true;
-        }
-    }
-
-    protected virtual void OnTriggerExit2D(Collider2D collision)
-    {
-        if(collision.CompareTag("Player"))
-        {
-            isCorrect = false;
-        }
-    }*/
 }
