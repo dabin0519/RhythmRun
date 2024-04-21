@@ -93,6 +93,11 @@ public abstract class Note : MonoBehaviour
         if(transform.position.x < -10)
         {
             Destroy(gameObject);
+
+            if(isCorrect)
+            {
+                NoteManager.Instance.Miss++;
+            }
         }
     }
 
@@ -118,6 +123,8 @@ public abstract class Note : MonoBehaviour
         {
             NoteManager.Instance.Bad++;
         }
+
+        isCorrect = false;
     }
 
     protected virtual void ChangeColor()
