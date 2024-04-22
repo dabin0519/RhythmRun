@@ -17,6 +17,7 @@ public abstract class Note : MonoBehaviour
     protected Vector3 _endScale = new Vector3(1, 1, 1);
     protected float _distance;
     protected float _percent;
+    protected bool _isOneCheck;
 
     protected virtual void Awake()
     {
@@ -50,17 +51,28 @@ public abstract class Note : MonoBehaviour
         Movement();
         CheckDie();
         CheckCorrect();
-        
-        if(!isHidden)
+        CalculatePercent();
+
+        if (!isHidden)
         {
             ChangeScale();
         }
     }
 
+    private void CalculatePercent()
+    {
+        float distance = Mathf.Abs(_playerController.transform.position.x - transform.position.x);
+        _percent = distance / _distance;
+    }
+
     private void CheckCorrect()
     {
+        if (_isOneCheck)
+            return;
+
         if(_percent < 0.12f)
         {
+            _isOneCheck = true;
             isCorrect = true;
         }
     }
@@ -81,8 +93,6 @@ public abstract class Note : MonoBehaviour
                 _hitObject.gameObject.SetActive(true);
             }
 
-            float distance = Mathf.Abs(_playerController.transform.position.x - transform.position.x);
-            _percent = distance / _distance;
             Vector3 scale = Vector3.Lerp(_endScale, _startScale, _percent);
             _hitObject.transform.localScale = scale;
         }
@@ -105,7 +115,16 @@ public abstract class Note : MonoBehaviour
 
     protected virtual void Correct()
     {
-        ChangeColor();
+        if(!isHidden)
+        {
+            ChangeColor();
+        }
+        else
+        {
+            Debug.Log("¼û°ÜÁø ¹ÚÀÚ¸¦ ¸ÂÃè¾î¿ä");
+        }
+
+        isCorrect = false;
 
         if(_percent < 0.02f)
         {
@@ -124,7 +143,6 @@ public abstract class Note : MonoBehaviour
             NoteManager.Instance.Bad++;
         }
 
-        isCorrect = false;
     }
 
     protected virtual void ChangeColor()

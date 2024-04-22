@@ -127,6 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCorrect: 0
+  isHidden: 1
   moveSpeed: 0
 --- !u!61 &-1819767585159590330
 BoxCollider2D:

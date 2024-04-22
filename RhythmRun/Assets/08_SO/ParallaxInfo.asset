@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ab68892eddbb448b1e087e8ba2e8bd, type: 3}
   m_Name: ParallaxInfo
   m_EditorClassIdentifier: 
-  skySpeed: 0.5
-  backSpeed: 1
-  middleSpeed: 2
-  frontSpeed: 3
+  skySpeed: 0.1
+  backSpeed: 0.2
+  middleSpeed: 0.5
+  frontSpeed: 1
   nearSpeed: 8

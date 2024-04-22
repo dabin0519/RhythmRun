@@ -6,6 +6,12 @@ public class UIContoller : MonoSingleton<UIContoller>
 {
     [SerializeField] private AudioClip _onMouseClip;
     [SerializeField] private AudioClip _clickMouseClip;
+    [SerializeField] private GameObject _scorePanel;
+
+    private void Awake()
+    {
+        _scorePanel.SetActive(false);
+    }
 
     public void PlayMouseOnSound()
     {
@@ -17,5 +23,11 @@ public class UIContoller : MonoSingleton<UIContoller>
     {
         if(_clickMouseClip != null)
             SoundManager.Instance.PlaySFX(_clickMouseClip);
+    }
+
+    public void ScorePanelOn()
+    {
+        _scorePanel.SetActive(true);
+        GameManager.Instance.Pause(true);
     }
 }

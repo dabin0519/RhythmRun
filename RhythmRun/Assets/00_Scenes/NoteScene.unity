@@ -1529,7 +1529,7 @@ GameObject:
   - component: {fileID: 1442505326}
   - component: {fileID: 1442505327}
   m_Layer: 0
-  m_Name: NoteManager
+  m_Name: RecordManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1562,7 +1562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60d17af26479fb7468f06fc4677c5a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _noteInfo: {fileID: 11400000, guid: 6c55226c74d6da844aa6163d7ad12188, type: 2}
+  _noteInfo: {fileID: 11400000, guid: 22c751e6f36bfb54f8572a8f2777513f, type: 2}
   _timerText: {fileID: 573548914}
   _playerTrm: {fileID: 1010754219}
   _jumpNote: {fileID: 6023770887577359382, guid: 438a658c658bf8149bb37968a80fe3ab, type: 3}
